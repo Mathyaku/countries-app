@@ -1,0 +1,57 @@
+<mat-table
+  #table
+  *ngIf="dataSource && dataSource.length > 0"
+  mat-table
+  [dataSource]="dataSource"
+  class="align-content-center"
+>
+  <!-- Favorite Column -->
+  <ng-container matColumnDef="favorite">
+    <mat-header-cell *matHeaderCellDef> Favorite </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <mat-icon
+        class="icon"
+        [ngClass]="{ 'favorite-star': isElementOnFavoriteList(element) }"
+        (click)="addOrRemoveFavorite(element)"
+        >star_rate</mat-icon
+      >
+    </mat-cell>
+  </ng-container>
+
+  <!-- Flag Column -->
+  <ng-container matColumnDef="flag">
+    <mat-header-cell *matHeaderCellDef> Flag </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <img class="flag-icon" [src]="element.flag" />
+    </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+  </ng-container>
+
+  <!-- NativeName Column -->
+  <ng-container matColumnDef="nativeName">
+    <mat-header-cell *matHeaderCellDef> Native Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.nativeName }} </mat-cell>
+  </ng-container>
+
+  <!-- Region Column -->
+  <ng-container matColumnDef="region">
+    <mat-header-cell *matHeaderCellDef> Region </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.region }} </mat-cell>
+  </ng-container>
+
+  <!-- Info Column -->
+  <ng-container matColumnDef="info">
+    <mat-header-cell *matHeaderCellDef> Info </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <mat-icon class="icon" (click)="openCountryInfoDialog(element)">info</mat-icon>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>

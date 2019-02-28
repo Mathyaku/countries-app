@@ -1,0 +1,36 @@
+<mat-accordion class="margin-bottom-25 margin-top-25 justify-content-center">
+  <mat-expansion-panel class="min-width-fit-content">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Filter
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ "Filter the data of the table below" }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field class="margin-right-10">
+        <mat-select placeholder="Region" [(ngModel)]="filterObj.region">
+            <mat-option (click)="filterObj.region = undefined">{{"-"}}</mat-option>
+            <mat-option *ngFor="let region of regions" [value]="region">{{region}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field >
+        <input matInput [(ngModel)]="filterObj.name" placeholder="Name" />
+    </mat-form-field>
+
+    <div class="min-width-fit-content justify-content-end">
+        <button mat-raised-button class="margin-right-10" (click)="clearFilter()">
+            <img class="icon" src="../../../assets/img/clear.svg">
+            Clear
+        </button>
+
+        <button mat-raised-button (click)="filter()">
+            <img class="icon" src="../../../assets/img/filter.svg">
+            Filter
+        </button>
+    </div>
+   
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,162 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    margin:0;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.background-color {
+    background: white;
+}
+
+.mat-button .mat-button-focus-overlay {
+    background-color: #00a2d43a;
+    color:white;
+  }
+
+.padding-left-10 {
+    padding-left: 10px;
+}
+
+.padding-right-10 {
+    padding-right: 10px;
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+
+.margin-bottom-25 {
+  margin-bottom: 25px;
+}
+
+.margin-right-10
+{
+  margin-right: 10px;
+}
+
+button.margin-right-10.mat-raised-button
+{
+    margin-right: 10px;
+}
+
+h1 {
+    background-color: #00a1d4;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    width: fit-content;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-top: -18px;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .vh-80  {
+    height: 80vh;
+  }
+
+  .justify-content-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .flex-direction-collumn {
+    flex-direction: column;
+  }
+
+  .align-items-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .justify-content-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .flag-icon {
+    height:1rem;
+    width:1.5rem;
+  }
+
+  .icon {
+    height:1rem;
+    cursor: pointer
+  }
+
+.body-content{
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .mat-raised-button {
+    background: #00a1d4;
+    color: white;
+  }
+
+  mat-cell {
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    min-width: 150px;
+  }
+  mat-header-cell {
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    min-width: 150px;
+  }
+
+  mat-cell{
+    display:flex;
+    justify-content:center;
+  }
+  
+  mat-header-cell {
+    display:flex;
+    justify-content:center;
+  }
+
+  mat-header-row {
+    min-width: fit-content;
+  }
+
+  mat-row {
+    min-width: fit-content;
+  }
+
+  td{
+    justify-content:center;
+  }
+  
+  th {
+    justify-content:center;
+  }
+
+
+  tr:not(.hidden):hover {
+    background: #00a2d43a;;
+  }
+  
+  tr:not(.hidden):active {
+    background: #00a2d43a;;
+  }
+
+  mat-row:not(.hidden):hover {
+    background: #00a2d43a;;
+  }
+  
+  mat-row:not(.hidden):active {
+    background: #00a2d43a;;
+  }
+  
+
+  div.mat-form-field-infix {
+    display: block;
+    position: relative;
+    flex: auto;
+    width: auto;
+    min-width: 100px;
+}
+ 

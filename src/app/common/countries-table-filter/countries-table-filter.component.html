@@ -1,0 +1,8 @@
+<div *ngIf="data && data.length > 0">
+    <app-countries-filter [data]="data" [updateFilterData]="updateFilterData" ></app-countries-filter>
+    <app-countries-table [dataSource]="filterData"></app-countries-table>
+    <h1 *ngIf="filterData.length==0" class="margin-top-100 align-items-center justify-content-center flex-direction-collumn">There are no countries on the list with your filter parameters.</h1>
+</div>
+
+
+
